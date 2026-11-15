@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" height="96" width="98">
+  <defs>
+    <!-- Black and White Gradients for Metallic/Glossy Look -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <linearGradient id="metalDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111" />
+      <stop offset="50%" stop-color="#333333" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+
+    <linearGradient id="metalLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#cccccc" />
+      <stop offset="100%" stop-color="#777777" />
+    </linearGradient>
+
+    <linearGradient id="arrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#222222" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+
+    <!-- Clip Path to Make the Entire Design Perfectly Round -->
+    <clipPath id="circleClip">
+      <circle cx="250" cy="250" r="180" />
+    </clipPath>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Shadow and Round Background Frame -->
+  <g filter="url(#shadow)">
+    <circle cx="250" cy="250" r="180" fill="url(#bgGrad)" stroke="#111111" stroke-width="6" />
+  </g>
+
+  <!-- Everything inside is clipped to the round container -->
+  <g clip-path="url(#circleClip)">
+    <!-- Background Texture/Gradient inside circle -->
+    <rect x="70" y="70" width="360" height="360" fill="#0d0d0d" />
+
+    <!-- Outer Swirl / Circular Shield Rings -->
+    <g fill="none" stroke-width="14" stroke-linecap="round">
+      <path d="M 250,90 C 350,90 410,150 410,250 C 410,350 350,410 250,410" stroke="url(#metalLight)" />
+      <path d="M 250,410 C 150,410 90,350 90,250 C 90,150 150,90 250,90" stroke="url(#metalDark)" />
+    </g>
+
+    <!-- Inner Network / Node Graph Structure -->
+    <g stroke="#ffffff" stroke-opacity="0.4" stroke-width="2">
+      <line x1="170" y1="200" x2="220" y2="170" />
+      <line x1="220" y1="170" x2="280" y2="210" />
+      <line x1="280" y1="210" x2="330" y2="180" />
+      <line x1="170" y1="200" x2="200" y2="260" />
+      <line x1="200" y1="260" x2="250" y2="240" />
+      <line x1="250" y1="240" x2="310" y2="280" />
+      <line x1="310" y1="280" x2="330" y2="180" />
+    </g>
+
+    <!-- Network Nodes (Dots) -->
+    <g fill="#ffffff">
+      <circle cx="170" cy="200" r="4" />
+      <circle cx="220" cy="170" r="5" />
+      <circle cx="280" cy="210" r="4" />
+      <circle cx="330" cy="180" r="6" />
+      <circle cx="200" cy="260" r="4" />
+      <circle cx="250" cy="240" r="5" />
+      <circle cx="310" cy="280" r="4" />
+    </g>
+
+    <!-- Central Dynamic Trending Arrow -->
+    <path d="M 160,310 L 230,240 L 270,270 L 360,170" fill="none" stroke="url(#arrowGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Arrowhead -->
+    <path d="M 320,170 L 360,170 L 360,210" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Glossy Highlight Overlay -->
+    <path d="M 70,70 Q 250,150 430,70 Q 250,20 70,70 Z" fill="#ffffff" opacity="0.15" />
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+const express=require('express');
+const repoController=require("../Controllers/repoController.js");
+const repoRouter=express.Router();
+repoRouter.post("/repo/create",repoController.createRepo);
+repoRouter.get("/repo/all",repoController.getAllRepo);
+repoRouter.get("/repo/:id",repoController.getRepoById);
+repoRouter.get("/repo/name/:name",repoController.getRepoByName);
+repoRouter.get("/repo/user/:userId",repoController.getRepoCurUser);
+repoRouter.put("/repo/update/:id",repoController.updateRepoById);
+repoRouter.patch("/repo/toggle/:id",repoController.toggleRepoById);
+repoRouter.delete("/repo/delete/:id",repoController.deleteRepoById);
+module.exports=repoRouter;

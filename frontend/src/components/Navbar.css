@@ -1,0 +1,20 @@
+.text-hover-effect {
+  color: #c9d1d9 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.text-hover-effect:hover {
+  color: #ffffff !important; /* Changes text to white on hover */
+  text-decoration: underline !important; /* Optional: adds underline only on hover */
+}
+.brand-hover-effect {
+  display: inline-flex  !important;
+  align-items: center  !important;
+  text-decoration: none  !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+.brand-hover-effect:hover {
+  transform: scale(1.08)  !important; /* Enlarges the logo and text slightly on hover */
+}
